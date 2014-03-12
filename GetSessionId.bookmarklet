@@ -1,0 +1,1 @@
+javascript:(function()%7Bvar match %3D document.cookie.match(%2F%5Cbsid%3D(%5B%5E%3B%5D%2B)%2F)%3Bif (match) %7BsfdcSessionId %3D match%5B1%5D%3Balert('Your Salesforce session ID is %5C'' %2B sfdcSessionId %2B '%5C'')%3B%7D else %7Balert('Failed to get Salesforce session ID')%3B%7D%7D)()
