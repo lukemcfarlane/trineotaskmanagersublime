@@ -1,5 +1,5 @@
 [{
 
 	"caption": "Task Manager: connect to Salesforce",
-	"command": "tm_connect_to_salesforce"
+	"command": "connect_to_salesforce"
 }]
