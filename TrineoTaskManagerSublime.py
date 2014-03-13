@@ -39,7 +39,7 @@ class ShowCurrentTimeCommand(sublime_plugin.WindowCommand):
         print("Checking connection with sid: " + sessionId)
         baseUrl = "https://trineo.my.salesforce.com/services/data/v29.0/"
         resource = "sobjects"
-        headers = { "Authorization": "Bearer" + sessionId }
+        headers = { "Authorization": "Bearer " + sessionId }
         res = requests.get(baseUrl + resource, headers=headers)
         print("Status code: " + str(res.status_code))
         print("Response body: " + res.text)

@@ -275,7 +275,7 @@
 			"file": "TrineoTaskManagerSublime.py",
 			"settings":
 			{
-				"buffer_size": 1302,
+				"buffer_size": 2174,
 				"line_ending": "Unix"
 			}
 		},
@@ -291,7 +291,7 @@
 			"file": "/Users/lukemcf/Library/Application Support/Sublime Text 3/Packages/User/TrineoTaskManager.sublime-settings",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 133,
 				"line_ending": "Unix"
 			}
 		},
@@ -856,15 +856,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1302,
+						"buffer_size": 2174,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								618,
-								618
+								1727,
+								1727
 							]
 						],
 						"settings":
@@ -872,7 +872,7 @@
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 160.0,
+						"translation.y": 117.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -912,7 +912,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 133,
 						"regions":
 						{
 						},
