@@ -275,15 +275,7 @@
 			"file": "TrineoTaskManagerSublime.py",
 			"settings":
 			{
-				"buffer_size": 222,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "simple_salesforce-0.62.0-py2.7.egg",
-			"settings":
-			{
-				"buffer_size": 53140,
+				"buffer_size": 550,
 				"line_ending": "Unix"
 			}
 		}
@@ -484,6 +476,7 @@
 	},
 	"file_history":
 	[
+		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/GetSessionId.bookmarklet",
 		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/README.md",
 		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/TrineoTaskManagerSublime",
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/pp_css.resource/pp_css/css/pricing.css",
@@ -610,8 +603,7 @@
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/pages/TestRunner.page",
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/classes/ngForceController.cls",
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/ccpp_luke.resource/ccpp/js/angular.js",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/ccpp_luke.resource/ccpp/ng/specs/pricingSpec.js",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/pages/PricingEntry.page-meta.xml"
+		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/ccpp_luke.resource/ccpp/ng/specs/pricingSpec.js"
 	],
 	"find":
 	{
@@ -815,35 +807,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 222,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								95,
-								95
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "simple_salesforce-0.62.0-py2.7.egg",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 53140,
+						"buffer_size": 550,
 						"regions":
 						{
 						},
@@ -856,13 +820,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

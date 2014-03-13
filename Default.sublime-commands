@@ -1,5 +1,8 @@
 [{
-
 	"caption": "Task Manager: connect to Salesforce",
 	"command": "connect_to_salesforce"
+}, {
+
+	"caption": "Task Manager: show current timer",
+	"command": "show_current_time"
 }]
