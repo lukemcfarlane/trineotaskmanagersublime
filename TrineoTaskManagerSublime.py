@@ -2,6 +2,8 @@
  # @author  Luke
  # @date    Feb 2014
 import sublime, sublime_plugin, os.path, os, re, sys
+sys.path.insert(0, os.path.dirname(__file__))
+import requests
 
 class ConnectToSalesforceCommand(sublime_plugin.WindowCommand):
     def run(self):
