@@ -275,7 +275,31 @@
 			"file": "TrineoTaskManagerSublime.py",
 			"settings":
 			{
-				"buffer_size": 550,
+				"buffer_size": 1302,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TrineoTaskManager.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 20,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/lukemcf/Library/Application Support/Sublime Text 3/Packages/User/TrineoTaskManager.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 745,
 				"line_ending": "Unix"
 			}
 		}
@@ -283,9 +307,25 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 347.0,
+		"height": 227.0,
 		"selected_items":
 		[
+			[
+				"Task",
+				"Task Manager: show current timer"
+			],
+			[
+				"show",
+				"Task Manager: show current timer"
+			],
+			[
+				"Show ",
+				"Task Manager: show current timer"
+			],
+			[
+				"show current",
+				"Task Manager: show current timer"
+			],
 			[
 				"floobit",
 				"Floobits - Leave Workspace"
@@ -446,6 +486,15 @@
 		"height": 320.0,
 		"history":
 		[
+			"sublime.load_settings(\"TrineoTaskManager.sublime-settings\").get(\"sessionId\")",
+			"TrineoTaskManagerSublime.ConnectToSalesforceCommand",
+			"TrineoTaskManagerSublime",
+			"new ConnectToSalesforceCommand(None)",
+			"new ConnectToSalesforceCommand()",
+			"new ConnectToSalesforceCommand",
+			"import TrineoTaskManagerSublime",
+			"import ConnectToSalesforceCommand",
+			"ConnectToSalesforceCommand",
 			"print(sys.path)",
 			"print sys.path",
 			"import sys",
@@ -476,6 +525,9 @@
 	},
 	"file_history":
 	[
+		"/Users/lukemcf/Library/Application Support/Sublime Text 3/Packages/User/TrineoTaskManager.sublime-settings",
+		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/Default.sublime-commands",
+		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/Main.sublime-menu",
 		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/GetSessionId.bookmarklet",
 		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/README.md",
 		"/Users/lukemcf/mm_workspace/TrineoTaskManagerSublime/TrineoTaskManagerSublime",
@@ -600,10 +652,7 @@
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/karma.conf.js",
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/pages/PriceEntry_POC.page",
 		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/staticresources/ccpp_alex.resource",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/pages/TestRunner.page",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/classes/ngForceController.cls",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/ccpp_luke.resource/ccpp/js/angular.js",
-		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/resource-bundles/ccpp_luke.resource/ccpp/ng/specs/pricingSpec.js"
+		"/Users/lukemcf/mm_workspace/clear_channel_c2_sbox/src/pages/TestRunner.page"
 	],
 	"find":
 	{
@@ -625,6 +674,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"S",
 			"setDemoNameByDemoKey",
 			"flightData",
 			"setDemoNameByDemoKey",
@@ -751,8 +801,7 @@
 			"group",
 			"New",
 			"P",
-			"plg",
-			"products"
+			"plg"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -807,7 +856,35 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 550,
+						"buffer_size": 1302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								618,
+								618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "TrineoTaskManager.sublime-settings",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 20,
 						"regions":
 						{
 						},
@@ -820,13 +897,70 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/lukemcf/Library/Application Support/Sublime Text 3/Packages/User/TrineoTaskManager.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
