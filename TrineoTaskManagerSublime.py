@@ -28,7 +28,25 @@ class ShowCurrentTimeCommand(sublime_plugin.WindowCommand):
                     self.window.run_command("connect_to_salesforce")
             else:
                 # self.window.active_view().set_status("z_current_timer", "(timer will show here)")
-                sublime.status_message("(timer will show here)")
+                if self.checkConnection(self.sessionId):
+                    sublime.status_message("(timer will show here)")
+                else:
+                    if sublime.ok_cancel_dialog("Uh oh, we tried pinging Salesforce and your session ID seems to be expired or invalid. Would you like to update it?"):
+                        self.window.run_command("connect_to_salesforce")
+
+
+    def checkConnection(self, sessionId):
+        print("Checking connection with sid: " + sessionId)
+        baseUrl = "https://trineo.my.salesforce.com/services/data/v29.0/"
+        resource = "sobjects"
+        headers = { "Authorization": "Bearer" + sessionId }
+        res = requests.get(baseUrl + resource, headers=headers)
+        print("Status code: " + str(res.status_code))
+        print("Response body: " + res.text)
+        return res.status_code == requests.codes.ok
+
+
+
 
 
 
