@@ -33,6 +33,36 @@ class TaskManagerService(object):
         else:
             sublime.message_dialog("Oops, that didn't quite go to plan. We got an error response code '" + str(res.status_code) + "'")
 
+    def getAvailableProjects(self):
+        print("Performing query to get available projects: " + self.settings.sessionId)
+        resource = "query"
+        queryStr = "Select Name, Id from Project__c where Status__c != 'Done'"
+        headers = { "Authorization": "Bearer " + self.settings.sessionId }
+        res = requests.get(self.settings.baseUrl + resource + "/?q=" + queryStr, headers=headers)
+        print("Status code: " + str(res.status_code))
+        print("Response body: " + res.text)
+        if res.status_code == requests.codes.ok:
+            projects = json.loads(res.text)["records"]
+            return projects 
+        else:
+            sublime.message_dialog("Oops, that didn't quite go to plan. We got an error response code '" + str(res.status_code) + "'")
+
+    def saveTime(self, timeObj):
+        timeJSON = json.dumps(timeObj)
+        resource = "sobjects/TaskManager_Session_Data__c"
+        headers = { 
+            "Authorization": "Bearer " + self.settings.sessionId ,
+            "Content-type": "application/json"
+        }
+        res = requests.post(self.settings.baseUrl + resource + "/", headers=headers, data=timeJSON)
+        print("Status code: " + str(res.status_code))
+        print("Response body: " + res.text)
+        if res.status_code == requests.codes.ok:
+            sublime.message_dialog("Woohoo, your new time entry has been created successfully!")
+        else:
+            sublime.message_dialog("Oops, that didn't quite go to plan. We got an error response code '" + str(res.status_code) + "'")
+
+
 
 class Settings(object):
     def __init__(self):

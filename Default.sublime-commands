@@ -5,4 +5,8 @@
 
 	"caption": "Task Manager: show current timer",
 	"command": "show_current_time"
+}, {
+
+	"caption": "Task Manager: start new timer",
+	"command": "start_new_timer"
 }]
