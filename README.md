@@ -19,6 +19,7 @@ Copy the following files into a new folder "TrineoTaskManager" inside your Subli
 - Default.sublime-commands
 - TrineoTaskManager.sublime-settings
 - Main.sublime-menu
+- requests (directory)
 
 Get your Salesforce session ID:
 - Create a new bookmark called "Get Session ID" in your browser with the bookmarklet code in GetSessionId.bookmarklet
