@@ -18,7 +18,6 @@ class ConnectToSalesforceCommand(sublime_plugin.WindowCommand):
     def setSessionId(self, id):
         self.id = id
         self.settings.set("sessionId", self.id)
-        sublime.save_settings("TrineoTaskManager.sublime-settings")
         print("Salesforce session ID saved")
 
 

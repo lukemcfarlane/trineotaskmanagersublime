@@ -57,4 +57,9 @@ class Settings(object):
                 settingsValid = False
         return settingsValid
 
+    def set(self, name, newValue):
+        self.settings.set(name, newValue);
+        sublime.save_settings("TrineoTaskManager.sublime-settings")
+
+
 
