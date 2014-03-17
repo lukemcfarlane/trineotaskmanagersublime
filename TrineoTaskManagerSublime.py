@@ -9,7 +9,6 @@ import requests, task_manager
 class ConnectToSalesforceCommand(sublime_plugin.WindowCommand):
     def run(self):
         reload(task_manager)
-        self.window = self.window
         self.settings = task_manager.Settings() 
         if(self.settings.validate()):
             self.tm = task_manager.TaskManagerService(self.settings)
@@ -19,6 +18,9 @@ class ConnectToSalesforceCommand(sublime_plugin.WindowCommand):
         self.id = id
         self.settings.set("sessionId", self.id)
         print("Salesforce session ID saved")
+        if not self.tm.checkConnection():
+            if sublime.ok_cancel_dialog("Oops, that session Id would appear to be expired or invalid. Would you like to try entering it again?"):
+                self.window.run_command("connect_to_salesforce")
 
 
 class ShowCurrentTimeCommand(sublime_plugin.WindowCommand):
