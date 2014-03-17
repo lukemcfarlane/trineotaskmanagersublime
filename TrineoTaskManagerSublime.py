@@ -31,7 +31,11 @@ class ShowCurrentTimeCommand(sublime_plugin.WindowCommand):
             self.tm = task_manager.TaskManagerService(self.settings)
             if self.tm.checkConnection():
                 currentTime = self.tm.getCurrentTime()
-                timeStatusStr = str(currentTime["Project_Entered__c"]) + ": " + str(currentTime["Description_Entered__c"]) + ("" if currentTime["Is_Stopwatch_running__c"] else " (paused)")
+                hours = currentTime["Accumulated_Time_Hours__c"]
+                minutes = currentTime["Accumulated_Time__c"]
+                elapsedTimeStr = '%(hours)0d:%(minutes)0d' % \
+                    { "hours": hours, "minutes": minutes }
+                timeStatusStr = str(currentTime["Project_Entered__c"]) + ": " + str(currentTime["Description_Entered__c"]) + " [" + elapsedTimeStr + "]" + ("" if currentTime["Is_Stopwatch_running__c"] else " (paused)")
                 sublime.status_message(timeStatusStr)
             else:
                 if sublime.ok_cancel_dialog("Uh oh, we tried pinging Salesforce and your session ID seems to be expired or invalid. Would you like to update it?"):

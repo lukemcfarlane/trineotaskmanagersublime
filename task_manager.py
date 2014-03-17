@@ -27,8 +27,9 @@ class TaskManagerService(object):
         print("Status code: " + str(res.status_code))
         print("Response body: " + res.text)
         if res.status_code == requests.codes.ok:
-            currentTime = json.loads(res.text)
-            return currentTime["records"][0]
+            currentTime = json.loads(res.text)["records"][0]
+            print(currentTime)
+            return currentTime
         else:
             sublime.message_dialog("Oops, that didn't quite go to plan. We got an error response code '" + str(res.status_code) + "'")
 
