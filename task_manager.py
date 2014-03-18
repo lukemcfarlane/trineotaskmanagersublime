@@ -40,6 +40,7 @@ class Settings(object):
         self.sessionId = self.settings.get("sessionId")
         self.userId = self.settings.get("userId")
         self.baseUrl = self.settings.get("baseUrl")
+        self.autoRefresh = self.settings.get("autoRefresh")
 
     def validate(self):
         settingsValid = True 

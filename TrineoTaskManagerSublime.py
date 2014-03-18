@@ -6,6 +6,26 @@ from imp import reload
 sys.path.insert(0, os.path.dirname(__file__))
 import requests, task_manager
 
+def plugin_loaded():
+    print("Plugin has loaded...")
+    sublime.set_timeout_async(showCurrentTime, 1)
+
+def showCurrentTime():
+    settings = task_manager.Settings() 
+    tm = task_manager.TaskManagerService(settings)
+    if(settings.sessionId == None):
+        print("Trineo Task Manager: Session ID has not been set")
+    elif(settings.autoRefresh == True):
+        currentTime = tm.getCurrentTime()
+        hours = currentTime["Accumulated_Time_Hours__c"]
+        minutes = currentTime["Accumulated_Time__c"]
+        elapsedTimeStr = '%(hours)02d:%(minutes)02d' % \
+            { "hours": hours, "minutes": minutes }
+        timeStatusStr = "    ~ " +str(currentTime["Project_Entered__c"]) + ": " + str(currentTime["Description_Entered__c"]) + " [" + elapsedTimeStr + "]" + ("" if currentTime["Is_Stopwatch_running__c"] else " (paused)") + " ~    "
+        sublime.active_window().active_view().set_status("z_tm_current_timer", timeStatusStr)
+        sublime.set_timeout_async(showCurrentTime, 60 * 1000) # run every 30 seconds
+
+
 class ConnectToSalesforceCommand(sublime_plugin.WindowCommand):
     def run(self):
         reload(task_manager)

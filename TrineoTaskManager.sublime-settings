@@ -1,5 +1,6 @@
 {
 	"sessionId": "",
 	"userId": "",
-	"baseURL": ""
+	"baseURL": "",
+	"autoRefresh": false
 }
